@@ -3,20 +3,20 @@
 Faucetix pays to account, and the user can request withdrawal when he wants.
 
 ## Requirements
-- PHP 5.4 or higher
+- PHP 5.4 or earlier
 - MySQL
 
 ## Features
-- FaucetBOX compatible
-- PDO
-- Smarty (easier to change themes, and caching to speed up your website)
-- Language system (in development)
-- Check proxies
-- reCAPTCHA v2
-- Referral system
-- Only one account per IP address
-- Ban addresses
-- URL Rewrite
+- FaucetBOX compatible;
+- PDO;
+- Smarty (easier to change themes, and caching to speed up your website);
+- Language system (in development);
+- Check proxies;
+- reCAPTCHA v2;
+- Referral system;
+- Only one account per IP address;
+- Ban addresses;
+- URL Rewrite;
 - And more...
 
 ## Instalation
