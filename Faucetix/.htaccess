@@ -1,0 +1,34 @@
+<ifModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+</ifModule>
+
+RewriteEngine On
+
+<FilesMatch "\.tpl$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+Options -Indexes
+
+RewriteRule ^(.*)\.html $1\.php 
+
+#SITE REWRITE RULES
+RewriteRule ^index(.*)$ index.php
+RewriteRule ^dashboard(|/)$ dashboard.php
+RewriteRule ^faucetList(|/)$ faucetList.php
+RewriteRule ^claim(|/)$ claim.php
+RewriteRule ^account(|/)$ account.php
+RewriteRule ^logout(|/)$ logout.php
+
+#ADMIN REWRITE RULES
+RewriteRule ^admin/index(|/)$ admin/index.php
+RewriteRule ^admin/login(|/)$ admin/login.php
+RewriteRule ^admin/settings(|/)$ admin/settings.php
+RewriteRule ^admin/adSettings(|/)$ admin/adSettings.php
+RewriteRule ^admin/banAddress(|/)$ admin/banAddress.php
+RewriteRule ^admin/userList(|/)$ admin/userList.php
+RewriteRule ^admin/logout(|/)$ admin/logout.php
