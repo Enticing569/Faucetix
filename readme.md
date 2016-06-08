@@ -3,15 +3,15 @@
 Faucetix pays to account, and the user can request withdrawal when he wants.
 
 ## Requirements:
-- PHP 5.4 or earlier
-- MySQL
+- PHP 5.4 or earlier;
+- MySQL 5.6.
 
 ## Features:
 - FaucetBOX compatible;
 - PDO;
 - Smarty (easier to change themes, and caching to speed up your website);
 - Language system (in development);
-- Check proxies;
+- Proxy checking;
 - reCAPTCHA v2;
 - Referral system;
 - Only one account per IP address;
@@ -20,9 +20,9 @@ Faucetix pays to account, and the user can request withdrawal when he wants.
 - And more...
 
 ## Installation:
-- Download the files.
-- Upload files to your FTP Server
-- Upload **faucetix.sql** using PhpMyAdmin (or another tool you prefer)
+- Download the files;
+- Upload files to your FTP Server;
+- Upload **faucetix.sql** using PhpMyAdmin (or another tool you prefer);
 - Configure **includes/config.inc.php** with your MySQL data, like:
 
 ```php
