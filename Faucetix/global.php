@@ -43,7 +43,6 @@ $template->assign('GCaptchaPubKey', $reCaptchaPubKey['value']);
 
 $getFaucetName = $db->Query('SELECT `value` FROM `settings` WHERE `setting` = "faucetName" LIMIT 1;')->Single(PDO::FETCH_ASSOC);
 $template->assign('faucetname', $getFaucetName['value']);
-$template->assign('pageName', $pageName);
 $template->assign('year', date('Y'));
 
 //CHECK IF SITE USES HTTPS

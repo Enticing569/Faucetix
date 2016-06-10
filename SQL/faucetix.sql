@@ -110,13 +110,13 @@ CREATE TABLE `settings` (
 INSERT INTO `settings` (`setting`, `value`) VALUES
 ('active', 'yes'),
 ('checkProxy', 'yes'),
-('FaucetBOX', 'E5L2Ili5M86goZgWjOToXeLdLAS8X'),
-('faucetName', 'bitLucky'),
+('FaucetBOX', 'YOUR_FAUCETBOX_API_KEY'),
+('faucetName', 'Faucetix'),
 ('maxReward', '500'),
 ('minReward', '100'),
 ('minWithdraw', '2000'),
-('recaptcha_pub_key', '6LfzGCETAAAAADREeB6t5iB5jfUzM7rPjy2zkds-'),
-('recaptcha_sec_key', '6LfzGCETAAAAACBdMXo6j17PZ7v3_uv60cE-qxLM'),
+('recaptcha_pub_key', 'YOUR_RECAPTCHA_PUBLIC_KEY'),
+('recaptcha_sec_key', 'YOUR_RECAPTCHA_PRIVATE_KEY'),
 ('ref_percent', '30'),
 ('timer', '0');
 

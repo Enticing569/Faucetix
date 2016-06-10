@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-12">
                 <hr />
-                <span style="color: grey;">&copy; {$year} {$faucetname}</span>
+                <span style="color: grey;">&copy; {$year} {$faucetname} - Powered by <b><a href="https://github.com/neto737/Faucetix" target="_blank">Faucetix Script</a></b></span>
             </div>
         </div>
     </div>

@@ -29,7 +29,7 @@
                         </thead>
                         <tbody>
                             {foreach $userList as $row}
-                            {assign var=i value=$i+1}
+                                {assign var=i value=$i+1}
                                 <tr>
                                     <td>{$i}</td>
                                     <td>{$row.address}</td>

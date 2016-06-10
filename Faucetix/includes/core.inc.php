@@ -40,3 +40,10 @@ $wallet = new walletManager;
 //FAUCETBOX API SETTINGS
 $faucetBoxAPI = $db->Query('SELECT `value` FROM `settings` WHERE `setting` = "FaucetBOX" LIMIT 1;')->Single(PDO::FETCH_ASSOC);
 $faucetbox = new FaucetBOX($faucetBoxAPI['value'], 'BTC');
+
+//SELECT THE BEST LANGUAGE [BASED IN USER BROWSER LANGUAGE]
+$language = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+
+$language = (in_array($language, ['en'])) ? $language : 'en';
+require_once 'languages/' . $language . '.lang.php';
+$template->assign('lang', $lang);

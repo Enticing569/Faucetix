@@ -1,4 +1,4 @@
-{include file='header.tpl'}
+{include file='header.tpl' PAGE_TITLE=$lang.account.title}
 <body>
     {include file='navbar.tpl'}
     <div class="container">
@@ -16,62 +16,62 @@
         </div>
         <div class="col-md-6">
             <div class="well content">
-                <h1>Account</h1>
-                <h3>Address</h3>
+                <h1>{$lang.account.title}</h1>
+                <h3>{$lang.global.address}</h3>
                 {$address}
-                <h3>Balance</h3>
-                {$balance} Satoshi<br><br>
+                <h3>{$lang.global.balance}</h3>
+                {$balance} {$lang.global.satoshi}<br><br>
                 {$resultHTML}
                 {$spaceMiddle}<br /><br />
                 {if $balance >= $minWithdraw}
                     <form method='post' action='?withdraw=true'>
-                        <input type='hidden' name='token' value='{$token}'/><button type='submit' class='btn btn-primary'>Withdraw to FaucetBOX</button>
+                        <input type='hidden' name='token' value='{$token}'/><button type='submit' class='btn btn-primary'>{$lang.account.withdraw_faucetbox}</button>
                     </form>
                 {else}
-                    <a href='#' class='btn btn-danger'>Withdraw is not avaible.</a>
+                    <a href='#' class='btn btn-danger'>{$lang.account.withdraw_unavailable}</a>
                 {/if}
                 <br /><br />
-                <h3>Stats</h3>
+                <h3>{$lang.account.stats}</h3>
                 <div class='row'>
                     <div class='col-md-12'>
-                        <h3>All time</h3>
+                        <h3>{$lang.account.all_time}</h3>
                     </div>
                     <div class='col-md-4'>
-                        <h4>Total Claims</h4>
+                        <h4>{$lang.account.total_claims}</h4>
                         <b>{$TotalClaims}</b>
                     </div>
                     <div class='col-md-4'>
-                        <h4>Total Claimed</h4>
-                        <b>{$TotalReward}</b><br />Satoshi
+                        <h4>{$lang.account.total_claimed}</h4>
+                        <b>{$TotalReward}</b><br />{$lang.global.satoshi}
                     </div>
                     <div class='col-md-4'>
-                        <h4>Total Referral Payout</h4>
-                        <b>{$TotalRefClaim}</b><br />Satoshi
+                        <h4>{$lang.account.total_referral_payout}</h4>
+                        <b>{$TotalRefClaim}</b><br />{$lang.global.satoshi}
                     </div>
                     <div class='col-md-12'>
-                        <h3>Last 24 Hours</h3>
+                        <h3>{$lang.account.last24h}</h3>
                     </div>
                     <div class='col-md-4'>
-                        <h4>Claims</h4>
+                        <h4>{$lang.account.claims}</h4>
                         <b>{$ClaimsLast24h}</b>
                     </div>
                     <div class='col-md-4'>
-                        <h4>Claimed</h4>
-                        <b>{$ClaimedLast24h}</b><br />Satoshi
+                        <h4>{$lang.account.claimed}</h4>
+                        <b>{$ClaimedLast24h}</b><br />{$lang.global.satoshi}
                     </div>
                     <div class='col-md-4'>
-                        <h4>Total Referral Payout</h4>
-                        <b>{$RefClaimedLast24h}</b><br />Satoshi
+                        <h4>{$lang.account.total_referral_payout}</h4>
+                        <b>{$RefClaimedLast24h}</b><br />{$lang.global.satoshi}
                     </div>
                 </div>
-                <h3>Last 15 Transactions</h3>
+                <h3>{$lang.account.last15transactions}</h3>
                 <center>
                     <table class='table' style='text-align: center; width: 100%;'border='0' cellpadding='2' cellspacing='2'>
                         <thead>
                             <tr>
-                                <td>Type</td>
-                                <td>Amount</td>
-                                <td>Time</td>
+                                <td>{$lang.account.type}</td>
+                                <td>{$lang.account.amount}</td>
+                                <td>{$lang.account.time}</td>
                             </tr>
                         </thead>
                         <tbody>

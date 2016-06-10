@@ -1,4 +1,4 @@
-{include file='header.tpl'}
+{include file='header.tpl' PAGE_TITLE=$lang.claim.title}
 <body>
     {include file='navbar.tpl'}
     <div class="container">
@@ -16,10 +16,10 @@
         </div>
         <div class="col-md-6">
             <div class="well content">
-                <h1>2. Solve Captcha</h1><br />
+                <h1>{$lang.claim.solve_captcha}</h1><br />
                 {if isset($verifykey)}
                     {if $verifykey != $user_claimtoken}
-                        <div class="alert alert-danger" role="alert">Claim failed. <a href="index">Go back</a></div>
+                        <div class="alert alert-danger" role="alert">{$lang.claim.claim_failed}</div>
                     {else}
                         {$spaceMiddle}<br /><br />
                         <form method='post' action='dashboard?c=1'>
@@ -28,11 +28,11 @@
                             </div>
                             <input type='hidden' name='verifykey' value='{$claim_token}'/>
                             <input type='hidden' name='token' value='{$token}'/>                          
-                            <button type='submit' class='btn btn-success'>Claim</button>
+                            <button type='submit' class='btn btn-success'>{$lang.global.claim}</button>
                         </form>
                     {/if}
                 {else}
-                    <div class="alert alert-danger" role="alert">Abusing the system is not allowed. <a href="index">Go back</a></div>
+                    <div class="alert alert-danger" role="alert">{$lang.global.system_abuse}</div>
                 {/if}
             </div>
         </div>

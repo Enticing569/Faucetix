@@ -10,7 +10,7 @@ Faucetix pays to account, and the user can request withdrawal when he wants.
 - FaucetBOX compatible;
 - PDO;
 - Smarty (easier to change themes, and caching to speed up your website);
-- Language system (in development);
+- Language system;
 - Proxy checking;
 - reCAPTCHA v2;
 - Referral system;
