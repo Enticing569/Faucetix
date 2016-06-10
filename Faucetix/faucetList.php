@@ -12,8 +12,6 @@
  * @copyright: Copyright (c) 2016 Faucetix
  */
 
-$pageName = 'Faucet List';
-
 require_once 'global.php';
 
 $refAddress = '1DNAopnenZxPLiY4N4sHPwpaRZbxmYJQX7';

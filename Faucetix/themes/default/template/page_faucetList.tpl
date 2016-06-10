@@ -1,4 +1,4 @@
-{include file='header.tpl'}
+{include file='header.tpl' PAGE_TITLE=$lang.faucetList.title}
 <body>
     <style>
         #hot {
@@ -32,15 +32,15 @@
         </div>
         <div class="col-md-8">
             <div class="well content">
-                <h2>Faucet List</h2>
+                <h2>{$lang.faucetList.title}</h2>
                 <center>
                     <table class='table' style='text-align: center; width: 100%;'border='0' cellpadding='2' cellspacing='2'>
                         <thead>
                             <tr>
                                 <td>#</td>
-                                <td>Faucet Name</td>
-                                <td>Timer (mins)</td>
-                                <td>Users per day</td>
+                                <td>{$lang.faucetList.faucet_name}</td>
+                                <td>{$lang.faucetList.timer}</td>
+                                <td>{$lang.faucetList.users}</td>
                             </tr>
                         </thead>
                         <tbody>
@@ -52,12 +52,12 @@
                                 <tr>
                                     <td>{$i}</td>
                                     <td>
-                                        <a hrer="{$row.url}?r={$refAddress}" target='_blank'>{$row.name}</a>
+                                        <a href="{$row.url}?r={$refAddress}" target='_blank'>{$row.name}</a>
                                         {if $row.hot == true}
-                                            <span id="hot" title="This faucet is one of the most popular ones!">HOT</span>
+                                            <span id="hot" title="{$lang.faucetList.hot_desc}">{$lang.faucetList.hot}</span>
                                         {/if}
                                         {if $row.new == '1'}
-                                            <span id="new" title="This faucet is new on our list!">NEW</span>
+                                            <span id="new" title="{$lang.faucetList.new_desc}">{$lang.faucetList.new}</span>
                                         {/if}
                                     </td>
                                     <td>{$row.timer}</td>

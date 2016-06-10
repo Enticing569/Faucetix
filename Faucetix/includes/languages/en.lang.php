@@ -75,5 +75,15 @@ $lang = [
         'type' => 'Type',
         'amount' => 'Amount',
         'time' => 'Time'
+    ],
+    'faucetList' => [
+        'title' => 'Faucet List',
+        'faucet_name' => 'Faucet Name',
+        'timer' => 'Timer (mins)',
+        'users' => 'Users per day',
+        'new' => 'NEW',
+        'new_desc' => 'This faucet is new on our list!',
+        'hot' => 'HOT',
+        'hot_desc' => 'This faucet is one of the most popular ones!'
     ]
 ];
