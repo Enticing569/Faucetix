@@ -12,8 +12,6 @@
  * @copyright: Copyright (c) 2016 Faucetix
  */
 
-$pageName = 'Home';
-
 require_once 'global.php';
 
 if (isset($_SESSION['faucet_token'])) {
@@ -33,7 +31,7 @@ if (isset($input->p)) {
     $token = $user->genToken($input->p['address']);
 
     if (!$wallet->validate($address)) {
-        $error[] = 'Invalid bitcoin address!';
+        $error[] = $lang['index']['invalid_address'];
         $alertForm = 'has-error';
     }
 
@@ -73,7 +71,7 @@ if (isset($input->p)) {
 
             header('Location: dashboard');
             exit;
-        } else {
+        } elseif ($checkAccount->rowCount() == 1 && $userCountByIP == 1) {
             $loginAccount = $db->Query('UPDATE `users` SET `last_activity` = :last_activity, `last_ip` = :last_ip WHERE `address` = :address;');
             $loginAccount->Bind(':last_activity', time(), PDO::PARAM_INT);
             $loginAccount->Bind(':last_ip', $userIP, PDO::PARAM_STR);
@@ -86,6 +84,8 @@ if (isset($input->p)) {
 
             header('Location: dashboard');
             exit;
+        } else {
+            $error[] = $lang['index']['ip_in_use'];
         }
     }
 }

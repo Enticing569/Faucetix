@@ -23,11 +23,16 @@ $lang = [
         'withdrawal' => 'Withdrawal',
         'system_abuse' => 'Abusing the system is not allowed. <a href="index">Try again</a>'
     ],
+    'navbar' => [
+        'home' => 'Home',
+        'faucet_list' => 'Faucet List'
+    ],
     'index' => [
         'title' => 'Home',
         'invalid_address' => 'Invalid bitcoin address!',
         'faucet' => 'Faucet',
         'enter_address_claim' => 'Enter your Address and start to claim!',
+        'ip_in_use' => 'Your IP address is already in use!',
         'bitcoin_address' => 'Bitcoin Address',
         'enter_address' => 'Enter your Bitcoin Address'
     ],
