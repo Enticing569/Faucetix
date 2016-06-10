@@ -12,8 +12,6 @@
  * @copyright: Copyright (c) 2016 Faucetix
  */
 
-$pageName = 'Dashboard';
-
 require_once 'global.php';
 
 if (!isset($_SESSION['faucet_token'])) {
@@ -73,13 +71,13 @@ if (time() >= $nextClaim) {
 
             //CHECK reCAPTCHA
             if (!$checkCAPTCHA) {
-                $error[] = 'Captcha is wrong. <a href="index">Try again</a>.';
+                $error[] = $lang['dash']['wrong_captcha'];
             }
 
             //CHECK IF USER ARE USING PROXY
             $getProxySetting = $db->Query('SELECT `value` FROM `settings` WHERE `setting` = "checkProxy" LIMIT 1;')->Single(PDO::FETCH_ASSOC);
             if ($getProxySetting['value'] == 'yes' && $site->checkProxy($userIP)) {
-                $error[] = 'VPN/Proxy/Tor is not allowed on this faucet.<br />Please disable and <a href="index">Try again</a>.';
+                $error[] = $lang['dash']['proxy_detected'];
             }
 
             if (!$error) {
@@ -126,7 +124,7 @@ if (time() >= $nextClaim) {
             $removeToken = $db->Query('UPDATE `users` SET `claim_token` = "null" WHERE address = :address;');
             $removeToken->Bind(':address', $_SESSION['address'], PDO::PARAM_STR);
             $removeToken->Execute();
-            $error[] = 'Abusing the system is not allowed. <a href="index">Try again</a>';
+            $error[] = $lang['global']['system_abuse'];
         }
     } else {
         $template->assign('userClaimToken', $user->getUserData('claim_token', $_SESSION['address']));

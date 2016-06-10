@@ -12,8 +12,6 @@
  * @copyright: Copyright (c) 2016 Faucetix
  */
 
-$pageName = 'Claim';
-
 require_once 'global.php';
 
 if (!isset($_SESSION['faucet_token'])) {

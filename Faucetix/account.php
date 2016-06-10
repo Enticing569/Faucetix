@@ -12,8 +12,6 @@
  * @copyright: Copyright (c) 2016 Faucetix
  */
 
-$pageName = 'Account';
-
 require_once 'global.php';
 
 if (!isset($_SESSION['faucet_token'])) {
@@ -45,7 +43,7 @@ if (isset($input->g['withdraw']) == 'true') {
             $insertHistory->Execute();
         }
     } else {
-        $result['html'] = '<div class="alert alert-danger">You do not have the minimum balance for withdrawal.</div>';
+        $result['html'] = '<div class="alert alert-danger">' . $lang['account']['insufficient_funds'] . '</div>';
     }
     $template->assign('resultHTML', $result['html']);
 }
