@@ -3,8 +3,11 @@
 Faucetix pays to account, and the user can request withdrawal when he wants.
 
 ## Requirements:
-- PHP 5.4 or earlier;
-- MySQL 5.6.
+- PHP 5.4 or earlier with:
+  - PDO;
+  - cURL;
+  - BCMath
+- MySQL 5.6
 
 ## Features:
 - FaucetBOX compatible;
@@ -47,6 +50,11 @@ $config = [
 **Password:** admin
 
 Now you're logged in at admin, you need to configure **FaucetBOX** API Key and **reCAPTCHA** API Keys to your faucet can start working.
+
+## Credits:
+- <a href="https://github.com/neto737" target="_blank">Neto Melo</a>
+- <a href="https://github.com/calvet" target="_blank">Wallace Calvet</a>
+- <a href="https://github.com/rodhilariox" target="_blank">Rodrigues Hilário</a>
 
 ## Donations:
 #### Donate: 1DNAopnenZxPLiY4N4sHPwpaRZbxmYJQX7
