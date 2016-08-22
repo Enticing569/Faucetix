@@ -42,7 +42,7 @@ $config = [
 ];
 ```
 
-- Open your website admin (http://yourdomain.tld/admin/) with login datas:
+- Open your faucet admin (http://yourdomain.tld/admin/) with login datas:
 
 
 **Username:** admin
